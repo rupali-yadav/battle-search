@@ -3,7 +3,7 @@ import Suggestion from './suggestion'
 const Suggestions = ({suggestions=[], selectSuggestion}) => (
     suggestions.length>0 &&
 
-    <div className="suggestionCon">
+    <div className="suggestions shadow-light">
         {
           suggestions.length > 0 && suggestions.map((battle) => (
             <Suggestion

@@ -1,10 +1,10 @@
 const Details = ({battle}) => (
-    <div className="battleInfoCon">
-        <h1> {battle.name}</h1>
-        <p> Location: {battle.location}</p>
-        <p> Outcome: {battle.attacker_outcome} </p>
-        <p> Attacker king: {battle.attacker_king}</p>
-        <p> Defender king: {battle.defender_king}</p>
+    <div className="details-card shadow-light">
+        <p className="title"> {battle.name}</p>
+        <p> <span>Location</span> {battle.location}</p>
+        <p> <span>Outcome</span> {battle.attacker_outcome} </p>
+        <p> <span>Attacker king</span> {battle.attacker_king}</p>
+        <p> <span>Defender king</span> {battle.defender_king}</p>
     </div>
 )
 
