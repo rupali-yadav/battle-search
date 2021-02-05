@@ -14,7 +14,7 @@ export const search = (queryString='', battles=[]) => {
     if (search){
       let results=[];
       const searchResults = new URLSearchParams(search);
-      battles?.length >0 && battles.filter((battle, i) => {
+      battles?.length > 0 && battles.filter((battle, i) => {
         let pushToArr = [];
         searchResults.forEach((val, item) => {
           if (battle[item]?.toLowerCase().indexOf(val.toLowerCase()) > -1)

@@ -18,10 +18,8 @@ function App() {
    const handleInputChange = (e) => {
      setInputVal(e.target.value);
      const value = e.target.value.trim();
-     const suggestions = state.battles?.length && state.battles.filter((battle) => {
-       if (value && battle?.location?.toLowerCase().indexOf(value) > -1)
-         return battle.location;
-     });
+     const suggestions = state?.battles?.length && state.battles.filter((battle) => 
+     (value && battle?.location?.toLowerCase().indexOf(value) > -1));
      setState({...state, filteredResults:[],suggestions});
     // console.log(getCount(state.battles));
     // console.log(getList(state.battles));
@@ -32,10 +30,8 @@ function App() {
 
    const selectSuggestion = (location='')=>{
      setInputVal('');
-     const filteredResults = state.battles?.length && state.battles.filter((battle) => {
-       if (location && battle?.location?.toLowerCase().indexOf(location.toLowerCase()) > -1)
-         return battle;
-     });
+     const filteredResults = state?.battles?.length && state.battles.filter((battle) => 
+     (location && battle?.location?.toLowerCase().indexOf(location.toLowerCase()) > -1));
      setState({...state,suggestions:[], filteredResults})
    }
    
